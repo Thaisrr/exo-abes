@@ -1,6 +1,9 @@
 <template>
   <div class="card">
     <h3 class="toto" :class="getClass">{{ game.nom }}</h3>
+    <p>
+      <button @click="emitDelete">Supprimer</button>
+    </p>
   </div>
 </template>
 
@@ -13,6 +16,12 @@ export default {
     game: {
       type: VideoGame,
       required: true
+    }
+  },
+  methods: {
+    emitDelete() {
+      // nom,..... args
+      this.$emit('delete', this.game);
     }
   },
   computed: {

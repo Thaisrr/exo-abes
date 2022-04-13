@@ -17,6 +17,7 @@
          v-for="(game, index) of video_games"
          :key="index"
          :game="game"
+         @delete="deleteMovie"
      />
    </div>
 </template>
@@ -50,6 +51,12 @@
          */
         if( confirm('Etes vous sûr.e ???') ) {
           this.video_games = [];
+        }
+      },
+      deleteMovie(movie) {
+        const i = this.video_games.indexOf(movie);
+        if(i >= 0) {
+          this.video_games.splice(i, 1);
         }
       }
     }
