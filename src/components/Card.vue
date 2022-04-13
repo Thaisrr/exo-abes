@@ -2,26 +2,28 @@
   <div class="card">
     <h3 class="toto" :class="getClass">{{ game.nom }}</h3>
     <p>
+      <router-link :to="{name: 'form', params: {id : game.id}}">Modifier</router-link>
+    </p>
+    <p>
       <button @click="emitDelete">Supprimer</button>
     </p>
   </div>
 </template>
 
 <script>
-import {VideoGame} from "../models/VideoGame";
 
 export default {
   name: "Card",
   props: {
     game: {
-      type: VideoGame,
+      type: Object,
       required: true
     }
   },
   methods: {
     emitDelete() {
       // nom,..... args
-      this.$emit('delete', this.game);
+      this.$emit('delete', this.game.id);
     }
   },
   computed: {

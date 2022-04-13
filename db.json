@@ -1,0 +1,23 @@
+{
+  "videogames": [
+    {
+      "id": 1,
+      "nom": "Horizon Forbidden West"
+    },
+    {
+      "nom": "The Witcher",
+      "is_started": false,
+      "id": 2
+    },
+    {
+      "nom": "Zelda",
+      "is_started": false,
+      "id": 4
+    },
+    {
+      "nom": "Pong",
+      "is_started": false,
+      "id": 5
+    }
+  ]
+}

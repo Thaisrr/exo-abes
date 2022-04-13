@@ -1,4 +1,5 @@
 export class VideoGame {
+    id;
     nom;
     is_started;
 
